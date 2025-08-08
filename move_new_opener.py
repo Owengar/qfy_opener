@@ -40,12 +40,10 @@ while True:
         pass
 
 
-modded_env = os.environ.copy()
-modded_env["new_open"] = 1
 
 
 print("Popen")
 time.sleep(5)
-proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\new_open_quantify.exe"}", shell=True, stdout=sys.stdout, stderr=sys.stderr, env=modded_env)
+proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\new_open_quantify.exe"}", shell=True, stdout=sys.stdout, stderr=sys.stderr)
 time.sleep(5)
 os.abort()

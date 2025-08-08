@@ -14,9 +14,8 @@ source_path = sys.argv[2]
 
 
 
-output = open(source_path + "\\mover_says_hi.txt", "w")
-sys.stdout = output 
-sys.stderr = output
+#output = open(source_path + "\\mover_says_hi.txt", "w")
+
 
 
 while psutil.pid_exists(parent_pid):
@@ -42,6 +41,6 @@ while True:
 
 print("Popen")
 time.sleep(5)
-proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", shell=True, creationflags=subprocess.DETACHED_PROCESS, stdout=output, stderr=output)
+proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", shell=True, creationflags=subprocess.DETACHED_PROCESS, stdout=sys.stdout, stderr=sys.stderr)
 time.sleep(5)
 os.abort()

@@ -41,5 +41,5 @@ while True:
         pass
 
 print("Popen")
-returncode = os.system(f"cd {source_path} & {source_path + "\\open_quantify.exe"}")
-print(returncode)
+proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", start_new_session=True, creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP, shell=True, stdout=output, stderr=output)
+os.abort()

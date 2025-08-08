@@ -41,4 +41,4 @@ while True:
         pass
 
 print("Popen")
-subprocess.run(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", shell=True, stdout=output, stderr=output)
+os.system(f"cd {source_path} & {source_path + "\\open_quantify.exe"}")

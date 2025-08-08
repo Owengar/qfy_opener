@@ -40,4 +40,5 @@ while True:
     except:
         pass
 
-subprocess.run(source_path + "\\open_quantify.exe", shell=True)
+print("Popen")
+subprocess.Popen(source_path + "\\open_quantify.exe", start_new_session=True, creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP, shell=True)

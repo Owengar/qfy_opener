@@ -41,4 +41,5 @@ while True:
         pass
 
 print("Popen")
-os.system(f"cd {source_path} & {source_path + "\\open_quantify.exe"}")
+returncode = os.system(f"cd {source_path} & {source_path + "\\open_quantify.exe"}")
+print(returncode)

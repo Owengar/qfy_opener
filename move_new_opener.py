@@ -41,4 +41,4 @@ while True:
         pass
 
 print("Popen")
-subprocess.Popen(source_path + "\\open_quantify.exe", start_new_session=True, creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP, shell=True)
+subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", start_new_session=True, creationflags=subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP, shell=True)

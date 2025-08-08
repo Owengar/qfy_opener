@@ -15,7 +15,7 @@ while psutil.pid_exists(parent_pid):
     pass
 
 output = open(source_path + "\\mover_says_hi.txt", "w")
-sys.stdout = output
+sys.stdout = output 
 sys.stderr = output
 
 shutil.copyfile(source_path + "\\new_opener.exe", source_path + "\\open_quantify.exe")

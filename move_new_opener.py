@@ -14,7 +14,7 @@ source_path = sys.argv[2]
 
 
 output = open(source_path + "\\mover_says_hi.txt", "w")
-sys.stdout = output
+sys.stdout = output 
 sys.stderr = output
 
 

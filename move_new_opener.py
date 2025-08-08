@@ -22,7 +22,7 @@ while psutil.pid_exists(parent_pid):
     pass
 print(parent_pid)
 print(source_path)
-psutil.pid_exists(parent_pid)
+print(psutil.pid_exists(parent_pid))
 
 shutil.copyfile(source_path + "\\new_opener.exe", source_path + "\\open_quantify.exe")
 subprocess.run(source_path + "\\open_quantify.exe", shell=True)

@@ -14,7 +14,7 @@ source_path = sys.argv[2]
 while psutil.pid_exists(parent_pid):
     pass
 
-with open("mover_says_hi.txt", "w"):
+with open(source_path + "mover_says_hi.txt", "w"):
     pass
 
 shutil.copyfile(source_path + "\\new_opener.exe", source_path + "\\open_quantify.exe")

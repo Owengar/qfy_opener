@@ -42,6 +42,6 @@ while True:
 
 print("Popen")
 time.sleep(5)
-proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", shell=True, stdout=output, stderr=output)
+proc = subprocess.Popen(f"cd {source_path} & {source_path + "\\open_quantify.exe"}", shell=True, creationflags=subprocess.DETACHED_PROCESS, stdout=output, stderr=output)
 time.sleep(5)
 os.abort()

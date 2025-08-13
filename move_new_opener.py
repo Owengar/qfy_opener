@@ -35,6 +35,7 @@ while True:
         time.sleep(1)
         print("tried again")
         shutil.copyfile(source_path + "\\new_opener.exe", source_path + "\\open_quantify.exe")
+        print("Copy success")
         break
     except:
         pass
